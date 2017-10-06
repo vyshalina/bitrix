@@ -1,0 +1,172 @@
+/*********************************/
+/********** Typography ***********/
+/*********************************/
+h2 {
+	@include font-type($CSReg, 32px, 34px, 0);
+	margin-bottom: 27px;
+}
+
+
+/*********************************/
+/*********** Buttons *************/
+/*********************************/
+.btn {
+	color: #fff; font-size: 22px !important; font-family: $CSMed; letter-spacing: 0.4px !important; line-height: 32px !important;
+	display: inline-block !important; padding: 0 15px !important; height: 38px !important; 
+	border-radius: 20px;
+}
+
+
+
+
+/*********************************/
+/******** Class Helpers **********/
+/*********************************/
+.icon {display: inline-block;}
+.red-bg {background: $red-bg;}
+
+
+
+/*********************************/
+/*********** Modules *************/
+/*********************************/
+//HEADER NAVIGATION - http://prntscr.com/gu0m9x
+.nav {
+	width: calc(100% - 222px);
+	ul.menu-top {
+		float: left;
+		li {
+			float: left; margin-right: 28px;
+			&:last-child {margin-right: 0;}
+			&.active {a {color: #000;}}
+
+			a {
+				@include font-type($CSMed, 18px, 22px, 0.2px); color: $red-text; text-transform: uppercase;
+			}
+		}
+	}
+
+
+	&-right {
+		float: right; width: 102px; display: flex; align-items: center; justify-content: space-between;
+		.language {
+			@include font-type($CSBol, 18px, 28px, 0); color: $red-text; text-transform: uppercase;
+			padding: 0 10px; position: relative; top: -3px;
+			background: $grey-bg;
+		}
+		.search {
+			margin-left: 32px;
+		}
+	}
+}
+
+
+//INTRO - http://prntscr.com/gu0mjj
+.intro {
+	position: relative; right: -15px; left: -15px; clear: both;
+
+	&-contact {
+		display: block; width: 410px; padding-top: 28px; float: right; position: relative; right: -46px;
+
+		i {
+			position: absolute; left: -83px; top: 29px;
+		}
+		a {
+			color: #fff;  @include font-type($CSReg, 28px, 47px, 0);
+			display: block;
+			&:nth-child(3) {padding-left: 5px;}
+			&.btn {
+				position: relative; margin-top: 18px; left: -13px;
+			}
+		}
+	}
+
+	&-text {
+
+		clear: both; width: 790px; padding-left: 199px; padding-top: 79px; position: relative;
+		& > * {position: relative; z-index: 2;}
+		&:before {
+			content: '';
+			display: block; position: absolute; left: 36px; top: -112px; z-index: 1;  width: 818px; height: 365px;
+			background: url(../img/cloud.png) no-repeat; 
+		}
+
+		figure {
+			text-align: left;
+			width: 370px; margin-bottom: 25px; display: inline-block;
+			img {float: left; margin-right: 17px;}
+			figcaption {
+				@include font-type($CSReg, 32px, 30px, 0);
+			}
+
+			&:nth-child(2) {
+				padding-left: 3px; margin-bottom: 0;
+			}
+		}
+
+		p {@include font-type($CSReg, 32px, 42px, 0);}
+	}
+
+	&-about {
+
+		padding-top: 96px; line-height: 75px; display: inline-block;
+
+		li {
+			color: #2fc7f3; @include font-type($CSReg, 44px, 48px, 0);
+			position: relative; width: 330px;  float: left; display: inline-block;
+			&:before {
+				content: '';
+				width: 11px; height: 71px; position: absolute;
+				background: url(../img/points.png) no-repeat;  
+			}
+			&:first-child {
+				&:before {
+					right: 97px; top: -92px;
+				}
+			}
+			&:nth-child(2) {
+				width: 200px; margin-right: 80px; margin-left: 59px; 
+				&:before {
+					right: 121px; top: -92px;
+				}
+			}
+			&:last-child {
+				margin-right: 0; width: 370px;
+				&:before {
+					left: 36px; top: -92px;
+				}
+			}
+		}
+		
+	}
+
+}
+
+.offer {
+	position: relative; width: calc(100% + 60px); left: -15px; right: -15px;
+
+	& > article {
+		float: left; width: 30%;
+	}
+
+	article {
+		h3 {
+			@include font-type($CSReg, 22px, 28px, 0); text-transform: uppercase;
+		} 
+
+		p {
+			@include font-type($CSReg, 22px, 33px, 0); margin-bottom: 8px;
+		}
+	}
+
+	&-right {
+		float: right; width: 66%;
+		& > article {
+			float: left; width: 45%; margin-right: 4%;
+		}
+
+		& > span {
+			clear: both; display: block;
+		}
+	}
+}
