@@ -209,6 +209,9 @@ h2 {
 				width: 645px; height: 399px; left: calc(50% - 38px); transform: translateX(-50%);
 				background: url(../img/cloud_mob.png) center center no-repeat;
 			}
+			@include respond-to(xs) {
+				left: calc(50% - 72px);
+			}
 		}
 		&:after {
 			content: '';
@@ -515,32 +518,56 @@ h2 {
 	&-block {
 		background: #f2f2f2; margin-right: 20px; width: calc(50% - 10px); padding: 23px 54px;
 		@include respond-to(sm) {
-			width: auto; margin: 0 -15px; padding: 23px 37px;
+			width: auto; margin: 0 -15px; padding: 23px 37px 27px;
+		}
+		@include respond-to(xs) {
+			padding: 23px 15px 27px;
 		}
 		&:last-child {
 			margin-right: 0; padding-left: 38px;
 			@include respond-to(sm) {
-				margin: 0 -15px; padding: 23px 37px;
+				margin: 0 -15px; padding: 23px 37px 27px;
+			}
+			@include respond-to(xs) {
+				padding: 23px 15px 27px;
 			}
 		}
 
 		h3 {
 			font-size: 32px; 
 			margin-bottom: 23px;
+			@include respond-to(xs) {
+				font-size: 26px;
+			}
 		}
 
 		p, ol, ul {
 			font-size: 22px;
+			@include respond-to(xs) {
+				font-size: 18px;
+			}
 		}
 
 		p {
 			line-height: 32px;
 			margin-bottom: 19px;
+			@include respond-to(xs) {
+				line-height: 26px;
+			}
+			br {
+				@include respond-to(xs) {
+					display: none;
+				}
+			}
 		}
 
 		ol {
 			line-height: 34px;
 			list-style-type: decimal; margin-left: 42px;
+			@include respond-to(xs) {
+				line-height: 26px;
+				margin-left: 29px;
+			}
 
 			li {
 				margin-bottom: 17px;
@@ -552,9 +579,16 @@ h2 {
 			li {
 				line-height: 32px; margin-bottom: 20px;
 				position: relative; padding-left: 39px;
+				@include respond-to(xs) {
+					line-height: 26px;
+					padding-left: 29px;
+				}
 				&:before {
 					content: '\2014';
 					position: absolute; left: 10px;
+					@include respond-to(xs) {
+						left: 0;
+					}
 				}
 			}
 		}
@@ -580,6 +614,7 @@ h2 {
 			&.active {
 				color: #1b5d96; 
 				border-bottom: none;
+				pointer-events: none;
 			}
 			a:hover {
 				border: none !important;
@@ -588,7 +623,7 @@ h2 {
 	}
 
 	&-content {
-		display: flex; justify-content: space-between;
+		display: flex; justify-content: space-between; position: relative;
 		figure {
 			margin-left: 34px; position: relative; top: -4px;
 			@include respond-to (sm) {
@@ -598,7 +633,9 @@ h2 {
 		article {
 			padding-left: 48px;
 			display: none;
-			&.active {display: block;}
+			&.active {
+				display: block;
+			}
 			p {
 				@include font-type($CSReg, 22px, 34px, 0);
 				@include respond-to (sm) {
@@ -699,9 +736,8 @@ h2 {
 				margin-right: 15px;
 			}
 			@media (max-width: 639px) {
-				display: block; width: 300px; float: none; margin: 0 auto; margin-bottom: 15px;
-				
-			} 
+				display: block; width: 290px; float: none; margin: 0 auto; margin-bottom: 15px;
+			}
 			&:nth-child(2) {
 				@include respond-to (sm) {
 					margin-right: 0;
@@ -718,6 +754,9 @@ h2 {
 			figure {
 				img {
 					position: absolute; left: 0; top: 0; z-index: 1;
+					@media (max-width: 639px) {
+						width: 100%;
+					} 
 				}
 				figcaption {
 					display: flex; flex-direction: column; height: 300px; justify-content: flex-end;
@@ -747,7 +786,7 @@ h2 {
 			font-size: 22px; line-height: 32px;
 			float: left; width: 50%;
 		}
-		@media (max-width: 639px) {width: 100%; float: none;}
+		@media (max-width: 639px) {width: 100%; float: none; display: block;}
 	}
 
 	& > a.btn {
@@ -758,7 +797,9 @@ h2 {
 			float: right;
 			margin-top: 37px;
 		}
-		@media (max-width: 639px) {float: left;}
+		@media (max-width: 639px) {
+			float: left; margin-top: 20px;
+		}
 		i {
 			margin-left: 10px; 
 		}
