@@ -493,7 +493,7 @@ h2 {
 .order {
 	max-width: 1200px; margin: 0 auto;
 
-	h3 {
+	div.tabs {
 		color: #21bcf0; @include font-type($GPMed, 44px, 52px, 0);
 		font-family: $GPMed;
 		padding-left: 65px; margin-bottom: 61px;
@@ -504,14 +504,14 @@ h2 {
 			@include font-type($GPBla, 44px, 24px, 0); color: #21bcf0;
 		}
 
-		span {
-			color: #1b5d96; 
-
-		}
 		a {
 			color: #0073e5; border-bottom: 2px dashed #0073e5;
+			&.active {
+				color: #1b5d96; 
+				border-bottom: none;
+			}
 			a:hover {
-				border: none;
+				border: none !important;
 			}
 		}
 	}
@@ -526,6 +526,8 @@ h2 {
 		}
 		article {
 			padding-left: 48px;
+			display: none;
+			&.active {display: block;}
 			p {
 				@include font-type($CSReg, 22px, 34px, 0);
 				@include respond-to (sm) {
