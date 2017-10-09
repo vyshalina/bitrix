@@ -8419,12 +8419,14 @@ h2 {
         position: relative;
         margin-top: 18px;
         left: -12px; }
-        @media (max-width: 991px) {
+        @media (max-width: 1419px) {
           .intro-contact a.btn {
             white-space: normal;
+            height: auto !important; } }
+        @media (max-width: 991px) {
+          .intro-contact a.btn {
             margin-top: 5px;
             padding: 1px 15px !important;
-            height: auto !important;
             width: auto;
             background: #1a5c95; } }
         @media (max-width: 480px) {
@@ -8610,6 +8612,8 @@ h2 {
           line-height: 24px; } }
       @media (max-width: 480px) {
         .intro-about li {
+          font-size: 24px;
+          line-height: 28px;
           width: 100% !important;
           float: none;
           margin-bottom: 10px;
@@ -8630,7 +8634,7 @@ h2 {
         height: 10px;
         position: absolute;
         left: 0;
-        top: 8px;
+        top: 10px;
         background: #2fc7f3;
         -webkit-border-radius: 50%;
         border-radius: 50%; }

@@ -173,9 +173,12 @@ h2 {
 			&:nth-child(3) {padding-left: 5px;}
 			&.btn {
 				position: relative; margin-top: 18px; left: -12px;
-				@include respond-to(md) {
+				@include respond-to(1419px) {
 					white-space: normal;
-					margin-top: 5px; padding: 1px 15px !important; height: auto !important; width: auto;
+					height: auto !important;
+				}
+				@include respond-to(md) {
+					margin-top: 5px; padding: 1px 15px !important; width: auto;
 					background: #1a5c95;
 				}
 				@include respond-to(xs) {
@@ -314,6 +317,7 @@ h2 {
 				font-size: 20px; line-height: 24px;
 			}
 			@include respond-to(xs) {
+				font-size: 24px; line-height: 28px;
 				width: 100% !important; float: none; margin-bottom: 10px; padding-left: 20px;
 			}
 			&:before {
@@ -326,7 +330,7 @@ h2 {
 			}
 			&:after {
 				content: '';
-				display: none; width: 10px; height: 10px; position: absolute; left: 0; top: 8px;
+				display: none; width: 10px; height: 10px; position: absolute; left: 0; top: 10px;
 				background: #2fc7f3; border-radius: 50%;
 				@include respond-to(xs) {
 					display: block;
@@ -636,16 +640,10 @@ h2 {
 		article {
 			padding-left: 48px;
 			display: none;
-<<<<<<< HEAD
-			&.active {
-				display: block;
-			}
-=======
 			@include respond-to (xs) {
 				padding-left: 0;
 			}
 			&.active {display: block;}
->>>>>>> fe9b9a939b0fdf45533b37aa74f5d49e5b62446b
 			p {
 				@include font-type($CSReg, 22px, 34px, 0);
 				@include respond-to (md) {
