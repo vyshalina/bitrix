@@ -174,12 +174,9 @@ h2 {
 			&.btn {
 				font-size: 22px;
 				position: relative; margin-top: 18px; left: -12px;
-				@include respond-to(1419px) {
-					white-space: normal;
-					height: auto !important;
-				}
 				@include respond-to(md) {
-					margin-top: 5px; padding: 1px 15px !important; width: auto;
+					white-space: normal;
+					margin-top: 5px; padding: 1px 15px !important; width: auto;height: auto !important;
 					background: #1a5c95;
 				}
 				@include respond-to(xs) {
