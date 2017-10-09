@@ -6197,7 +6197,7 @@ h2 {
       .intro-about {
         position: relative;
         z-index: 1;
-        padding: 96px 15px 0; } }
+        padding: 100px 15px 0; } }
     .intro-about li {
       color: #2fc7f3;
       font-family: "ClearSans-Regular", sans-serif;
@@ -6212,7 +6212,7 @@ h2 {
         .intro-about li {
           font-size: 36px;
           line-height: 38px;
-          width: 30%; } }
+          width: 30% !important; } }
       @media (max-width: 991px) {
         .intro-about li {
           font-size: 32px;
@@ -6290,7 +6290,7 @@ h2 {
     @media (max-width: 991px) {
       .offer article {
         width: 100%;
-        margin-bottom: 80px; } }
+        margin-bottom: 61px; } }
     .offer article:last-child {
       margin-bottom: 0; }
     .offer article h3 {
@@ -6299,12 +6299,20 @@ h2 {
       line-height: 28px;
       letter-spacing: 0;
       text-transform: uppercase; }
+      @media (max-width: 991px) {
+        .offer article h3 {
+          margin-top: 13px;
+          margin-bottom: 12px; } }
     .offer article p {
       font-family: "ClearSans-Regular", sans-serif;
       font-size: 22px;
       line-height: 33px;
       letter-spacing: 0;
       margin-bottom: 8px; }
+      @media (max-width: 991px) {
+        .offer article p {
+          line-height: 32px;
+          margin-bottom: 10px; } }
       @media (max-width: 991px) {
         .offer article p br {
           display: none; } }
@@ -6314,10 +6322,16 @@ h2 {
       display: -ms-flexbox;
       display: flex;
       margin-top: 51px; }
+      @media (max-width: 991px) {
+        .offer article .buy {
+          margin-top: 28px; } }
       .offer article .buy .price {
         margin-right: 14px; }
   .offer > article .buy {
     margin-top: 35px; }
+    @media (max-width: 991px) {
+      .offer > article .buy {
+        margin-top: 28px; } }
     .offer > article .buy .price {
       background: #9bfade;
       padding: 0 27px; }
@@ -6362,11 +6376,19 @@ h2 {
       margin-top: 47px;
       position: relative;
       left: -5px; }
+      @media (max-width: 991px) {
+        .offer-right > span {
+          line-height: 26px;
+          left: 0;
+          width: 360px;
+          margin-top: 26px; } }
       .offer-right > span .price {
         background: #ffffb2;
         padding: 0 10px; }
         @media (max-width: 991px) {
           .offer-right > span .price {
+            font-size: 22px;
+            line-height: 26px;
             background: transparent;
             padding: 0; } }
 
@@ -6381,12 +6403,22 @@ h2 {
   justify-content: space-between;
   max-width: 1360px;
   margin: 0 auto; }
+  @media (max-width: 767px) {
+    .about {
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; } }
   .about-block {
     background: #f2f2f2;
     margin-right: 20px;
     width: -webkit-calc(50% - 10px);
     width: calc(50% - 10px);
     padding: 23px 54px; }
+    @media (max-width: 767px) {
+      .about-block {
+        width: auto;
+        margin: 0 -15px;
+        padding: 23px 37px; } }
     .about-block:last-child {
       margin-right: 0;
       padding-left: 38px; }
@@ -6472,14 +6504,38 @@ h2 {
       background: #2fc7f3; }
   .app .wr-offer {
     padding-top: 110px; }
+    @media (max-width: 991px) {
+      .app .wr-offer {
+        padding: 53px 25px 0; } }
     .app .wr-offer h2 {
+      line-height: 38px;
       margin-bottom: 27px;
       position: relative;
       left: -3px; }
   .app .wr-about {
     padding-top: 121px; }
+    @media (max-width: 991px) {
+      .app .wr-about {
+        padding-top: 63px; } }
     .app .wr-about h2 {
       text-align: center;
       margin-bottom: 95px; }
+      @media (max-width: 767px) {
+        .app .wr-about h2 {
+          margin-bottom: 76px; } }
+      .app .wr-about h2 span {
+        font-size: inherit;
+        font-family: inherit; }
+        @media (max-width: 991px) {
+          .app .wr-about h2 span {
+            display: none; } }
+        .app .wr-about h2 span.mob {
+          display: none; }
+          @media (max-width: 991px) {
+            .app .wr-about h2 span.mob {
+              display: block; } }
+      @media (max-width: 991px) {
+        .app .wr-about h2 .btn {
+          padding: 0 28px !important; } }
   .app .wr-order {
     padding-top: 95px; }

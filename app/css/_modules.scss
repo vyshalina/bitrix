@@ -251,7 +251,7 @@ h2 {
 			display: flex; justify-content: space-between;
 		}
 		@include respond-to(md) {
-			position: relative; z-index: 1; padding: 96px 15px 0;
+			position: relative; z-index: 1; padding: 100px 15px 0;
 		}
 
 		li {
@@ -259,7 +259,7 @@ h2 {
 			position: relative; width: 330px;  float: left; display: inline-block;
 			@include respond-to(lg) {
 				font-size: 36px; line-height: 38px;
-				width: 30%;
+				width: 30% !important;
 			}
 			@include respond-to(md) {
 				font-size: 32px; line-height: 34px;
@@ -317,17 +317,23 @@ h2 {
 	article {
 		width: 33.33333%;
 		@include respond-to(md) {
-			width: 100%; margin-bottom: 80px;
+			width: 100%; margin-bottom: 61px;
 		}
 		&:last-child {
 			margin-bottom: 0;
 		}
 		h3 {
 			@include font-type($CSReg, 22px, 28px, 0); text-transform: uppercase;
+			@include respond-to(md) {
+				margin-top: 13px; margin-bottom: 12px;
+			}
 		} 
 
 		p {
 			@include font-type($CSReg, 22px, 33px, 0); margin-bottom: 8px;
+			@include respond-to(md) {
+				line-height: 32px; margin-bottom: 10px;
+			}
 			br {
 				@include respond-to(md) {
 					display: none;
@@ -338,6 +344,9 @@ h2 {
 		.buy {
 			display: flex;
 			margin-top: 51px;
+			@include respond-to(md) {
+				margin-top: 28px;
+			}
 
 			.price {
 				margin-right: 14px;
@@ -348,6 +357,9 @@ h2 {
 	& > article {
 		.buy {
 			margin-top: 35px;
+			@include respond-to(md) {
+				margin-top: 28px;
+			}
 
 			.price {
 				background: #9bfade; padding: 0 27px;
@@ -386,10 +398,15 @@ h2 {
 		& > span {
 			@include font-type($CSReg, 22px, 24px, 0); color: #000;
 			display: block; margin-top: 47px; position: relative; left: -5px;
+			@include respond-to(md) {
+				line-height: 26px;
+				left: 0; width: 360px; margin-top: 26px;
+			}
 
 			.price {
 				background: #ffffb2; padding: 0 10px;
 				@include respond-to(md) {
+					font-size: 22px; line-height: 26px;
 					background: transparent; padding: 0;
 				}
 			}
@@ -400,9 +417,15 @@ h2 {
 .about {
 	display: flex; justify-content: space-between;
 	max-width: 1360px; margin: 0 auto;
+	@include respond-to(sm) {
+		flex-wrap: wrap;
+	}
 
 	&-block {
 		background: #f2f2f2; margin-right: 20px; width: calc(50% - 10px); padding: 23px 54px;
+		@include respond-to(sm) {
+			width: auto; margin: 0 -15px; padding: 23px 37px;
+		}
 		&:last-child {
 			margin-right: 0; padding-left: 38px;
 		}
