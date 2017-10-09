@@ -5739,6 +5739,96 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 47px;
   height: 36px; }
 
+@font-face {
+  font-family: GothaProBla;
+  src: url("../fonts/GothaProBla/GothaProBla.eot");
+  src: url("../fonts/GothaProBla/GothaProBla.eot") format("embedded-opentype"), url("../fonts/GothaProBla/GothaProBla.woff") format("woff"), url("../fonts/GothaProBla/GothaProBla.ttf") format("truetype"), url("../fonts/GothaProBla/GothaProBla.svg#GothaProBla") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: GothaProBla;
+    src: url("../fonts/GothaProBla/GothaProBla.svg#GothaProBla") format("svg"); } }
+
+@font-face {
+  font-family: GothaProBol;
+  src: url("../fonts/GothaProBol/GothaProBol.eot");
+  src: url("../fonts/GothaProBol/GothaProBol.eot") format("embedded-opentype"), url("../fonts/GothaProBol/GothaProBol.woff") format("woff"), url("../fonts/GothaProBol/GothaProBol.ttf") format("truetype"), url("../fonts/GothaProBol/GothaProBol.svg#GothaProBol") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: GothaProBol;
+    src: url("../fonts/GothaProBol/GothaProBol.svg#GothaProBol") format("svg"); } }
+
+@font-face {
+  font-family: gothapromed;
+  src: url("../fonts/gothapromed/gothapromed.eot");
+  src: url("../fonts/gothapromed/gothapromed.eot") format("embedded-opentype"), url("../fonts/gothapromed/gothapromed.woff") format("woff"), url("../fonts/gothapromed/gothapromed.ttf") format("truetype"), url("../fonts/gothapromed/gothapromed.svg#gothapromed") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: gothapromed;
+    src: url("../fonts/gothapromed/gothapromed.svg#gothapromed") format("svg"); } }
+
+@font-face {
+  font-family: ClearSans-Bold;
+  src: url("../fonts/ClearSans-Bold/ClearSans-Bold.eot");
+  src: url("../fonts/ClearSans-Bold/ClearSans-Bold.eot") format("embedded-opentype"), url("../fonts/ClearSans-Bold/ClearSans-Bold.woff") format("woff"), url("../fonts/ClearSans-Bold/ClearSans-Bold.ttf") format("truetype"), url("../fonts/ClearSans-Bold/ClearSans-Bold.svg#ClearSans-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: ClearSans-Bold;
+    src: url("../fonts/ClearSans-Bold/ClearSans-Bold.svg#ClearSans-Bold") format("svg"); } }
+
+@font-face {
+  font-family: ClearSans-Medium;
+  src: url("../fonts/ClearSans-Medium/ClearSans-Medium.eot");
+  src: url("../fonts/ClearSans-Medium/ClearSans-Medium.eot") format("embedded-opentype"), url("../fonts/ClearSans-Medium/ClearSans-Medium.woff") format("woff"), url("../fonts/ClearSans-Medium/ClearSans-Medium.ttf") format("truetype"), url("../fonts/ClearSans-Medium/ClearSans-Medium.svg#ClearSans-Medium") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: ClearSans-Medium;
+    src: url("../fonts/ClearSans-Medium/ClearSans-Medium.svg#ClearSans-Medium") format("svg"); } }
+
+@font-face {
+  font-family: ClearSans-Regular;
+  src: url("../fonts/ClearSans-Regular/ClearSans-Regular.eot");
+  src: url("../fonts/ClearSans-Regular/ClearSans-Regular.eot") format("embedded-opentype"), url("../fonts/ClearSans-Regular/ClearSans-Regular.woff") format("woff"), url("../fonts/ClearSans-Regular/ClearSans-Regular.ttf") format("truetype"), url("../fonts/ClearSans-Regular/ClearSans-Regular.svg#ClearSans-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: ClearSans-Regular;
+    src: url("../fonts/ClearSans-Regular/ClearSans-Regular.svg#ClearSans-Regular") format("svg"); } }
+
+/***********************/
+/******** Colors *******/
+/***********************/
+/***********************/
+/******** Fonts ********/
+/***********************/
+/*********************************/
+/********** Typography ***********/
+/*********************************/
+/*********************************/
+/*********** Buttons *************/
+/*********************************/
+/*********************************/
+/******** Class Helpers **********/
+/*********************************/
+/*********************************/
+/*********** Modules *************/
+/*********************************/
 /*********************************/
 /********** Typography ***********/
 /*********************************/
@@ -5747,7 +5837,9 @@ h2 {
   font-size: 32px;
   line-height: 34px;
   letter-spacing: 0;
-  margin-bottom: 27px; }
+  margin-bottom: 27px;
+  max-width: 1200px;
+  margin: 0 auto; }
 
 /*********************************/
 /*********** Buttons *************/
@@ -5772,6 +5864,18 @@ h2 {
 
 .red-bg {
   background: #ff3333; }
+
+.blue-bg {
+  background: #b5edfd; }
+
+.price {
+  font-family: "ClearSans-Regular";
+  font-size: 26px;
+  line-height: 40px;
+  letter-spacing: 0.2px;
+  color: #000;
+  padding: 0 20px;
+  height: 39px; }
 
 /*********************************/
 /*********** Modules *************/
@@ -5826,20 +5930,21 @@ h2 {
 
 .intro {
   position: relative;
-  right: -15px;
-  left: -15px;
-  clear: both; }
+  clear: both;
+  max-width: 1200px;
+  margin: 0 auto; }
   .intro-contact {
     display: block;
     width: 410px;
-    padding-top: 28px;
+    padding-top: 32px;
+    padding-left: 15px;
     float: right;
     position: relative;
-    right: -46px; }
+    right: 0; }
     .intro-contact i {
       position: absolute;
-      left: -83px;
-      top: 29px; }
+      left: -69px;
+      top: 33px; }
     .intro-contact a {
       color: #fff;
       font-family: "ClearSans-Regular";
@@ -5852,7 +5957,7 @@ h2 {
       .intro-contact a.btn {
         position: relative;
         margin-top: 18px;
-        left: -13px; }
+        left: -12px; }
   .intro-text {
     clear: both;
     width: 790px;
@@ -5931,36 +6036,142 @@ h2 {
           top: -92px; }
 
 .offer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   position: relative;
-  width: -webkit-calc(100% + 60px);
-  width: calc(100% + 60px);
-  left: -15px;
-  right: -15px; }
-  .offer > article {
-    float: left;
-    width: 30%; }
-  .offer article h3 {
-    font-family: "ClearSans-Regular";
-    font-size: 22px;
-    line-height: 28px;
-    letter-spacing: 0;
-    text-transform: uppercase; }
-  .offer article p {
-    font-family: "ClearSans-Regular";
-    font-size: 22px;
-    line-height: 33px;
-    letter-spacing: 0;
-    margin-bottom: 8px; }
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  left: -3px; }
+  .offer article {
+    width: 35%; }
+    .offer article h3 {
+      font-family: "ClearSans-Regular";
+      font-size: 22px;
+      line-height: 28px;
+      letter-spacing: 0;
+      text-transform: uppercase; }
+    .offer article p {
+      font-family: "ClearSans-Regular";
+      font-size: 22px;
+      line-height: 33px;
+      letter-spacing: 0;
+      margin-bottom: 8px; }
+    .offer article .buy {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      margin-top: 51px; }
+      .offer article .buy .price {
+        margin-right: 14px; }
+  .offer > article .buy {
+    margin-top: 35px; }
+    .offer > article .buy .price {
+      background: #9bfade;
+      padding: 0 27px; }
   .offer-right {
-    float: right;
-    width: 66%; }
-    .offer-right > article {
-      float: left;
-      width: 45%;
-      margin-right: 4%; }
+    width: 63.3%; }
+    .offer-right .article-wrapp {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      .offer-right .article-wrapp > article {
+        width: 50%;
+        float: left; }
+        .offer-right .article-wrapp > article:last-child {
+          padding-left: 22px; }
     .offer-right > span {
-      clear: both;
-      display: block; }
+      font-family: "ClearSans-Regular";
+      font-size: 22px;
+      line-height: 24px;
+      letter-spacing: 0;
+      color: #000;
+      display: block;
+      margin-top: 47px;
+      position: relative;
+      left: -5px; }
+      .offer-right > span .price {
+        background: #ffffb2;
+        padding: 0 10px; }
+
+.about {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 1360px; }
+  .about-block {
+    background: #f2f2f2;
+    margin-right: 20px;
+    width: -webkit-calc(50% - 10px);
+    width: calc(50% - 10px);
+    padding: 23px 54px; }
+    .about-block:last-child {
+      margin-right: 0;
+      padding-left: 38px; }
+    .about-block h3 {
+      font-size: 32px;
+      margin-bottom: 23px; }
+    .about-block p, .about-block ol, .about-block ul {
+      font-size: 22px; }
+    .about-block p {
+      line-height: 32px;
+      margin-bottom: 19px; }
+    .about-block ol {
+      line-height: 34px;
+      list-style-type: decimal;
+      margin-left: 42px; }
+      .about-block ol li {
+        margin-bottom: 17px; }
+    .about-block ul {
+      margin-top: 19px; }
+      .about-block ul li {
+        line-height: 32px;
+        margin-bottom: 20px;
+        position: relative;
+        padding-left: 39px; }
+        .about-block ul li:before {
+          content: '\2014';
+          position: absolute;
+          left: 10px; }
+
+.order {
+  max-width: 1200px;
+  margin: 0 auto; }
+  .order h3 {
+    color: #21bcf0;
+    font-family: "gothapromed:";
+    font-size: 44px;
+    line-height: 24px;
+    letter-spacing: 0;
+    font-family: "gothapromed:";
+    padding-left: 65px; }
+    .order h3 .strong {
+      font-family: "GothaProBla";
+      font-size: 44px;
+      line-height: 24px;
+      letter-spacing: 0;
+      color: #21bcf0; }
+    .order h3 span {
+      color: #1b5d96; }
+    .order h3 a {
+      color: #0073e5; }
 
 .app {
   min-width: 320px;
@@ -5968,9 +6179,14 @@ h2 {
   overflow-x: hidden;
   background: #ffffff; }
   .app .wr-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     padding: 20px 0;
     width: 100%;
-    display: inline-block; }
+    max-width: 1200px;
+    margin: 0 auto; }
     .app .wr-header .logo, .app .wr-header .nav {
       float: left; }
     .app .wr-header .logo {
@@ -5985,100 +6201,17 @@ h2 {
       display: block;
       width: 100%;
       height: 442px;
-      background: #2fc7f3; }
+      background: #b5edfd; }
   .app .wr-offer {
-    padding-top: 90px; }
+    padding-top: 110px; }
     .app .wr-offer h2 {
+      margin-bottom: 27px;
       position: relative;
-      left: -15px; }
-
-.content {
-  position: relative;
-  left: -30px;
-  right: -30px;
-  width: -webkit-calc(100% + 30px);
-  width: calc(100% + 30px); }
-
-/*********************************/
-/********** Typography ***********/
-/*********************************/
-/*********************************/
-/*********** Buttons *************/
-/*********************************/
-/*********************************/
-/******** Class Helpers **********/
-/*********************************/
-/*********************************/
-/*********** Modules *************/
-/*********************************/
-@font-face {
-  font-family: GothaProBla;
-  src: url("../fonts/GothaProBla/GothaProBla.eot");
-  src: url("../fonts/GothaProBla/GothaProBla.eot") format("embedded-opentype"), url("../fonts/GothaProBla/GothaProBla.woff") format("woff"), url("../fonts/GothaProBla/GothaProBla.ttf") format("truetype"), url("../fonts/GothaProBla/GothaProBla.svg#GothaProBla") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: GothaProBla;
-    src: url("../fonts/GothaProBla/GothaProBla.svg#GothaProBla") format("svg"); } }
-
-@font-face {
-  font-family: GothaProBol;
-  src: url("../fonts/GothaProBol/GothaProBol.eot");
-  src: url("../fonts/GothaProBol/GothaProBol.eot") format("embedded-opentype"), url("../fonts/GothaProBol/GothaProBol.woff") format("woff"), url("../fonts/GothaProBol/GothaProBol.ttf") format("truetype"), url("../fonts/GothaProBol/GothaProBol.svg#GothaProBol") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: GothaProBol;
-    src: url("../fonts/GothaProBol/GothaProBol.svg#GothaProBol") format("svg"); } }
-
-@font-face {
-  font-family: GothaProMed;
-  src: url("../fonts/GothaProMed/GothaProMed.eot");
-  src: url("../fonts/GothaProMed/GothaProMed.eot") format("embedded-opentype"), url("../fonts/GothaProMed/GothaProMed.woff") format("woff"), url("../fonts/GothaProMed/GothaProMed.ttf") format("truetype"), url("../fonts/GothaProMed/GothaProMed.svg#GothaProMed") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: GothaProMed;
-    src: url("../fonts/GothaProMed/GothaProMed.svg#GothaProMed") format("svg"); } }
-
-@font-face {
-  font-family: ClearSans-Bold;
-  src: url("../fonts/ClearSans-Bold/ClearSans-Bold.eot");
-  src: url("../fonts/ClearSans-Bold/ClearSans-Bold.eot") format("embedded-opentype"), url("../fonts/ClearSans-Bold/ClearSans-Bold.woff") format("woff"), url("../fonts/ClearSans-Bold/ClearSans-Bold.ttf") format("truetype"), url("../fonts/ClearSans-Bold/ClearSans-Bold.svg#ClearSans-Bold") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: ClearSans-Bold;
-    src: url("../fonts/ClearSans-Bold/ClearSans-Bold.svg#ClearSans-Bold") format("svg"); } }
-
-@font-face {
-  font-family: ClearSans-Medium;
-  src: url("../fonts/ClearSans-Medium/ClearSans-Medium.eot");
-  src: url("../fonts/ClearSans-Medium/ClearSans-Medium.eot") format("embedded-opentype"), url("../fonts/ClearSans-Medium/ClearSans-Medium.woff") format("woff"), url("../fonts/ClearSans-Medium/ClearSans-Medium.ttf") format("truetype"), url("../fonts/ClearSans-Medium/ClearSans-Medium.svg#ClearSans-Medium") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: ClearSans-Medium;
-    src: url("../fonts/ClearSans-Medium/ClearSans-Medium.svg#ClearSans-Medium") format("svg"); } }
-
-@font-face {
-  font-family: ClearSans-Regular;
-  src: url("../fonts/ClearSans-Regular/ClearSans-Regular.eot");
-  src: url("../fonts/ClearSans-Regular/ClearSans-Regular.eot") format("embedded-opentype"), url("../fonts/ClearSans-Regular/ClearSans-Regular.woff") format("woff"), url("../fonts/ClearSans-Regular/ClearSans-Regular.ttf") format("truetype"), url("../fonts/ClearSans-Regular/ClearSans-Regular.svg#ClearSans-Regular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: ClearSans-Regular;
-    src: url("../fonts/ClearSans-Regular/ClearSans-Regular.svg#ClearSans-Regular") format("svg"); } }
+      left: -3px; }
+  .app .wr-about {
+    padding-top: 121px; }
+    .app .wr-about h2 {
+      text-align: center;
+      margin-bottom: 95px; }
+  .app .wr-order {
+    padding-top: 95px; }

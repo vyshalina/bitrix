@@ -2,8 +2,8 @@
 /********** Typography ***********/
 /*********************************/
 h2 {
-	@include font-type($CSReg, 32px, 34px, 0);
-	margin-bottom: 27px;
+	@include font-type($CSReg, 32px, 34px, 0); 
+	margin-bottom: 27px; max-width: 1200px; margin: 0 auto; 
 }
 
 
@@ -24,6 +24,12 @@ h2 {
 /*********************************/
 .icon {display: inline-block;}
 .red-bg {background: $red-bg;}
+.blue-bg {background: $blue-bg;}
+
+.price {
+	@include font-type($CSReg, 26px, 40px, 0.2px); color: #000;
+	padding: 0 20px; height: 39px;
+}
 
 
 
@@ -63,20 +69,20 @@ h2 {
 
 //INTRO - http://prntscr.com/gu0mjj
 .intro {
-	position: relative; right: -15px; left: -15px; clear: both;
+	position: relative; clear: both; max-width: 1200px; margin: 0 auto;
 
 	&-contact {
-		display: block; width: 410px; padding-top: 28px; float: right; position: relative; right: -46px;
+		display: block; width: 410px; padding-top: 32px; padding-left: 15px; float: right; position: relative; right: 0; 
 
 		i {
-			position: absolute; left: -83px; top: 29px;
+			position: absolute; left: -69px; top: 33px;
 		}
 		a {
 			color: #fff;  @include font-type($CSReg, 28px, 47px, 0);
 			display: block;
 			&:nth-child(3) {padding-left: 5px;}
 			&.btn {
-				position: relative; margin-top: 18px; left: -13px;
+				position: relative; margin-top: 18px; left: -12px;
 			}
 		}
 	}
@@ -143,13 +149,11 @@ h2 {
 }
 
 .offer {
-	position: relative; width: calc(100% + 60px); left: -15px; right: -15px;
-
-	& > article {
-		float: left; width: 30%;
-	}
+	display: flex; justify-content: space-between;
+	position: relative; max-width: 1200px; margin: 0 auto; position: relative; left: -3px;
 
 	article {
+		width: 35%;
 		h3 {
 			@include font-type($CSReg, 22px, 28px, 0); text-transform: uppercase;
 		} 
@@ -157,16 +161,118 @@ h2 {
 		p {
 			@include font-type($CSReg, 22px, 33px, 0); margin-bottom: 8px;
 		}
+
+		.buy {
+			display: flex;
+			margin-top: 51px;
+
+			.price {
+				margin-right: 14px;
+			}
+		}
+	}
+
+	& > article {
+		.buy {
+			margin-top: 35px;
+
+			.price {
+				background: #9bfade; padding: 0 27px;
+			}
+		}
+		
 	}
 
 	&-right {
-		float: right; width: 66%;
-		& > article {
-			float: left; width: 45%; margin-right: 4%;
+
+		width: 63.3%;
+
+		.article-wrapp {
+			display: flex; justify-content: space-between;
+			& > article {
+				width: 50%; float: left;
+				&:last-child {
+					padding-left: 22px;
+				}
+			}
 		}
+		
 
 		& > span {
-			clear: both; display: block;
+			@include font-type($CSReg, 22px, 24px, 0); color: #000;
+			display: block; margin-top: 47px; position: relative; left: -5px;
+
+			.price {
+				background: #ffffb2; padding: 0 10px;
+			}
+		}
+	}
+}
+
+.about {
+	display: flex; justify-content: space-between;
+	max-width: 1360px; 
+
+	&-block {
+		background: #f2f2f2; margin-right: 20px; width: calc(50% - 10px); padding: 23px 54px;
+		&:last-child {
+			margin-right: 0; padding-left: 38px;
+		}
+
+		h3 {
+			font-size: 32px; 
+			margin-bottom: 23px;
+		}
+
+		p, ol, ul {
+			font-size: 22px;
+		}
+
+		p {
+			line-height: 32px;
+			margin-bottom: 19px;
+		}
+
+		ol {
+			line-height: 34px;
+			list-style-type: decimal; margin-left: 42px;
+
+			li {
+				margin-bottom: 17px;
+			}
+		}
+
+		ul {
+			margin-top: 19px;
+			li {
+				line-height: 32px; margin-bottom: 20px;
+				position: relative; padding-left: 39px;
+				&:before {
+					content: '\2014';
+					position: absolute; left: 10px;
+				}
+			}
+		}
+	}
+}
+
+.order {
+	max-width: 1200px; margin: 0 auto;
+
+	h3 {
+		color: #21bcf0; @include font-type($GPMed, 44px, 24px, 0);
+		font-family: $GPMed;
+		padding-left: 65px;
+		.strong {
+			@include font-type($GPBla, 44px, 24px, 0); color: #21bcf0;
+		}
+
+		span {
+			color: #1b5d96; 
+
+		}
+		a {
+			color: #0073e5;
 		}
 	}
 }
