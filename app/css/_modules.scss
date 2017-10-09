@@ -11,7 +11,7 @@ h2 {
 /*********** Buttons *************/
 /*********************************/
 .btn {
-	color: #fff; font-size: 22px !important; font-family: $CSMed; letter-spacing: 0.4px !important; line-height: 32px !important;
+	color: #fff; font-size: 22px; font-family: $CSMed; letter-spacing: 0.4px !important; line-height: 32px !important;
 	display: inline-block !important; padding: 0 15px !important; height: 38px !important; 
 	border-radius: 20px;
 }
@@ -477,7 +477,7 @@ h2 {
 	h3 {
 		color: #21bcf0; @include font-type($GPMed, 44px, 24px, 0);
 		font-family: $GPMed;
-		padding-left: 65px;
+		padding-left: 65px; margin-bottom: 61px;
 		.strong {
 			@include font-type($GPBla, 44px, 24px, 0); color: #21bcf0;
 		}
@@ -487,7 +487,185 @@ h2 {
 
 		}
 		a {
-			color: #0073e5;
+			color: #0073e5; border-bottom: 2px dashed #0073e5;
+			a:hover {
+				border: none;
+			}
 		}
+	}
+
+	&-content {
+		display: flex; justify-content: space-between;
+		figure {
+			margin-left: 34px; position: relative; top: -4px;
+		}
+		article {
+			padding-left: 48px;
+			p {
+				@include font-type($CSReg, 22px, 32px, 0);
+			}
+			ul {
+				list-style-type: disc; font-size: 18px;
+				padding-left: 20px;
+
+				li {
+					margin-bottom: 8px;
+				}
+			}
+
+			h4 {
+				@include font-type($CSReg, 32px, 36px, 0); margin-top: 44px;
+			}
+
+			.btn-gr {
+				margin-top: 62px; position: relative; left: -20px;
+				span {
+					color: #ff3333; font-size: 18px; letter-spacing: 0.2px;
+					display: inline-block; margin-bottom: 35px;
+					a.btn {
+						margin-right: 8px;
+					}
+					a.blue-bg {
+					background: #30c7f4;
+					border-radius: 20px;
+				}
+
+				}
+			}
+		}
+	}
+}
+
+.social {
+	max-width: 1200px; margin: 0 auto;
+	font-size: 24px; 
+	span {
+		float: left; display: inline-block; margin-right: 15px; padding-top: 7px;
+	}
+	ul {
+		float: left;
+		li {
+			float: left; margin-right: 10px;
+			a {
+				text-align: center;
+				width: 40px; height: 40px; position: relative; display: block;
+				border-radius: 50%; 
+
+				&.facebook {background: #1f489a;}
+				&.vk {background: #4c77ac}
+				&.twitter {background: #03a8e2;}
+				&.google {background: #e44233;}
+				i {
+					color: #fff; position: relative; top: 7px;
+				}
+			}
+		}
+	}
+}
+
+.seemore {
+	h2 {margin-bottom: 49px;}
+	ul {
+		@include respond-to (sm) {
+			display: flex; justify-content: space-around;
+			@media (max-width: 639px) {display: block;} 
+		}
+		li {
+			position: relative; display: inline-block; width: 300px; margin-right: 39px; height: 300px; float: left;
+			@include respond-to (lg) {margin-right: 10px;}
+			@include respond-to (sm)  {
+				margin-right: 15px;
+			}
+			@media (max-width: 639px) {
+				display: block; width: 300px; float: none; margin: 0 auto; margin-bottom: 15px;
+				
+			} 
+			&:nth-child(2) {
+				@include respond-to (sm) {
+					margin-right: 0;
+				}
+				@media (max-width: 639px) {margin-right: auto;}
+				
+			}
+
+			&:last-child {
+				@include respond-to (md) {
+					display: none;
+				}
+			}
+			figure {
+				img {
+					position: absolute; left: 0; top: 0; z-index: 1;
+				}
+				figcaption {
+					display: flex; flex-direction: column; height: 300px; justify-content: flex-end;
+					position: relative; z-index: 2; padding-bottom: 13px;
+					a {
+						color: #fff; @include font-type($CSReg, 24px, 36px, 0); text-align: center;
+						display: block; width: 100%;
+					}
+				}
+			}
+
+			
+		}
+	}
+}
+
+.footer {
+	display: flex; justify-content: space-between; align-items: center;
+	max-width: 1350px; margin: 0 auto;
+	@include respond-to (lg) {
+		display: inline-block; padding: 10px 0;
+	}
+
+	small {
+		@include font-type($CSReg, 18px, 22px, 0); color: #fff;
+		@include respond-to (lg) {
+			font-size: 22px; line-height: 32px;
+			float: left; width: 50%;
+		}
+		@media (max-width: 639px) {width: 100%; float: none;}
+	}
+
+	& > a.btn {
+		display: flex !important; align-items: center; 
+
+		font-size: 18px !important;
+		@include respond-to (lg) {
+			float: right;
+			margin-top: 37px;
+		}
+		@media (max-width: 639px) {float: left;}
+		i {
+			margin-left: 10px; 
+		}
+
+	}
+
+	ul.contact {
+		@include respond-to (lg) {
+			clear: both; display: block; padding-top: 30px;
+		}
+		li {
+			float: left; margin-right: 10px;
+			@include respond-to (lg) {
+				margin-right: 50px;
+			}
+			@media (max-width: 639px) {
+				float: none; margin: 15px 0;
+			}
+			&:last-child {
+				margin-right: 0;
+				@media  (max-width: 639px) {margin-bottom: 0;}
+			}
+			a {
+				color: #ff1919; @include font-type($CSMed, 18px, 22px, 0); text-transform: uppercase;
+			}
+			
+
+		}
+	
+		
 	}
 }
