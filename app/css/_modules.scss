@@ -39,26 +39,74 @@ h2 {
 //HEADER NAVIGATION - http://prntscr.com/gu0m9x
 .nav {
 	width: calc(100% - 222px);
+	a.burger {
+		display: none; float: right;
+		width: 30px; height: 30px; padding-top: 5px;
+		@include respond-to(md) {
+			display: block; z-index: 9999; position: relative; margin-left: 48px;
+		}
+		span {
+			width: 26px; height: 4px;display: block; margin: 0 auto 4px;
+			background: #ff1919;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&.active {
+			span {
+				&:nth-child(2) {
+					display: none;
+				}
+				&:first-child {
+					position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%) rotate(45deg);
+				}
+				&:last-child {
+					position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%) rotate(-45deg);
+				}
+			}
+		}
+	}
 	ul.menu-top {
-		float: left;
+		float: left; margin-bottom: 0;
+		@include respond-to(md) {
+			position: fixed; left: 0; top: 0; bottom: 0; right: 0; z-index: 9990; transform: translateX(-100%); padding-top: 77px;
+			background: #ffffff;
+			transition: .4s ease-out;
+		}
+		&.active {
+			transform: translateX(0);
+		}
 		li {
 			float: left; margin-right: 28px;
 			&:last-child {margin-right: 0;}
 			&.active {a {color: #000;}}
+			@include respond-to(md) {
+				text-align: center;
+				float: none; display: block; margin: 0 0 15px;
+			}
 
 			a {
 				@include font-type($CSMed, 18px, 22px, 0.2px); color: $red-text; text-transform: uppercase;
+				@include respond-to(md) {
+					font-size: 22px; line-height: 24px;
+				}
 			}
 		}
 	}
 
 
 	&-right {
-		float: right; width: 102px; display: flex; align-items: center; justify-content: space-between;
+		float: right; width: 102px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 9999;
+		@include respond-to(md) {
+			width: auto;
+		}
 		.language {
 			@include font-type($CSBol, 18px, 28px, 0); color: $red-text; text-transform: uppercase;
 			padding: 0 10px; position: relative; top: -3px;
 			background: $grey-bg;
+			@include respond-to(md) {
+				display: none;
+			}
 		}
 		.search {
 			margin-left: 32px;
@@ -72,17 +120,47 @@ h2 {
 	position: relative; clear: both; max-width: 1200px; margin: 0 auto;
 
 	&-contact {
-		display: block; width: 410px; padding-top: 32px; padding-left: 15px; float: right; position: relative; right: 0; 
-
+		display: block; width: 410px; padding-top: 29px; padding-left: 15px; float: right; position: relative; right: 0;  z-index: 2;
+		@include respond-to(md) {
+			float: none; padding: 4px 20px 0; display: flex; flex-wrap: wrap;
+		}
 		i {
 			position: absolute; left: -69px; top: 33px;
+			@include respond-to(lg) {
+				display: none;
+			}
 		}
 		a {
 			color: #fff;  @include font-type($CSReg, 28px, 47px, 0);
 			display: block;
+			@include respond-to(md) {
+				font-size: 26px; line-height: 30px;
+				margin-bottom: 11px;
+			}
+
+			&:nth-child(3) {
+				@include respond-to(md) {
+					order: 2;
+				}
+			}
+			&:nth-child(2) {
+				@include respond-to(md) {
+					order: 3;
+				}
+			}
+			&:nth-child(4) {
+				@include respond-to(md) {
+					order: 4;
+				}
+			}
+
 			&:nth-child(3) {padding-left: 5px;}
 			&.btn {
 				position: relative; margin-top: 18px; left: -12px;
+				@include respond-to(md) {
+					margin-top: 5px;
+					background: #1a5c95;
+				}
 			}
 		}
 	}
@@ -90,56 +168,137 @@ h2 {
 	&-text {
 
 		clear: both; width: 790px; padding-left: 199px; padding-top: 79px; position: relative;
+		@include respond-to(lg) {
+			padding-top: 125px;
+		}
+		@include respond-to(md) {
+			width: 460px; padding-left: 7px; margin: 0 auto; padding-top: 65px;
+		}
 		& > * {position: relative; z-index: 2;}
 		&:before {
 			content: '';
 			display: block; position: absolute; left: 36px; top: -112px; z-index: 1;  width: 818px; height: 365px;
-			background: url(../img/cloud.png) no-repeat; 
+			background: url(../img/cloud.png) center center no-repeat;
+			@include respond-to(lg) {
+				top: -50px;
+			}
+			@include respond-to(md) {
+				width: 645px; height: 399px; left: calc(50% - 38px); transform: translateX(-50%);
+				background: url(../img/cloud_mob.png) center center no-repeat;
+			}
+		}
+		&:after {
+			content: '';
+			display: block; position: absolute; left: -82px; top: -162px; z-index: 1;  width: 997px; height: 468px;
+			background: url(../img/cloud_2.png) center center no-repeat; 
+			@include respond-to(lg) {
+				display: none;
+			}
 		}
 
 		figure {
 			text-align: left;
 			width: 370px; margin-bottom: 25px; display: inline-block;
-			img {float: left; margin-right: 17px;}
+			@include respond-to(md) {
+				width: auto; margin-bottom: 0; display: block;
+			}
+			img {
+				float: left; margin-right: 17px;
+				@include respond-to(md) {
+					float: none; margin-right: 0; display: inline-block; width: 428px;
+				}
+			}
 			figcaption {
 				@include font-type($CSReg, 32px, 30px, 0);
+				@include respond-to(md) {
+					font-size: 26px; line-height: 28px;
+					display: inline-block; vertical-align: bottom;
+				}
 			}
 
 			&:nth-child(2) {
 				padding-left: 3px; margin-bottom: 0;
 			}
+
+			&.webr {
+				@include respond-to(md) {
+					margin-bottom: 21px;
+					img {
+						width: 202px;
+					}
+				}
+			}
 		}
 
-		p {@include font-type($CSReg, 32px, 42px, 0);}
+		p {
+			@include font-type($CSReg, 32px, 42px, 0);
+			@include respond-to(md) {
+				font-size: 26px; line-height: 32px;
+				display: block;
+			}
+			br {
+				@include respond-to(md) {
+					display: none;
+				}
+			}
+		}
 	}
 
 	&-about {
 
 		padding-top: 96px; line-height: 75px; display: inline-block;
+		@include respond-to(lg) {
+			display: flex; justify-content: space-between;
+		}
+		@include respond-to(md) {
+			position: relative; z-index: 1; padding: 96px 15px 0;
+		}
 
 		li {
 			color: #2fc7f3; @include font-type($CSReg, 44px, 48px, 0);
 			position: relative; width: 330px;  float: left; display: inline-block;
+			@include respond-to(lg) {
+				font-size: 36px; line-height: 38px;
+				width: 30%;
+			}
+			@include respond-to(md) {
+				font-size: 32px; line-height: 34px;
+			}
+			@include respond-to(sm) {
+				font-size: 26px; line-height: 28px;
+			}
 			&:before {
 				content: '';
 				width: 11px; height: 71px; position: absolute;
-				background: url(../img/points.png) no-repeat;  
+				background: url(../img/points.png) no-repeat;
 			}
 			&:first-child {
 				&:before {
 					right: 97px; top: -92px;
+					@include respond-to(md) {
+						right: 20%;transform: translateX(-50%);
+					}
 				}
 			}
 			&:nth-child(2) {
 				width: 200px; margin-right: 80px; margin-left: 59px; 
+				@include respond-to(md) {
+					margin-right: 0; margin-left: 0;
+				}
 				&:before {
 					right: 121px; top: -92px;
+					@include respond-to(md) {
+						right: 50%;transform: translateX(-50%);
+					}
 				}
 			}
 			&:last-child {
 				margin-right: 0; width: 370px;
 				&:before {
 					left: 36px; top: -92px;
+					@include respond-to(md) {
+						left: 20%;transform: translateX(-50%);
+					}
 				}
 			}
 		}
@@ -151,15 +310,29 @@ h2 {
 .offer {
 	display: flex; justify-content: space-between;
 	position: relative; max-width: 1200px; margin: 0 auto; position: relative; left: -3px;
+	@include respond-to(md) {
+		flex-wrap: wrap;
+	}
 
 	article {
-		width: 35%;
+		width: 33.33333%;
+		@include respond-to(md) {
+			width: 100%; margin-bottom: 80px;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
 		h3 {
 			@include font-type($CSReg, 22px, 28px, 0); text-transform: uppercase;
 		} 
 
 		p {
 			@include font-type($CSReg, 22px, 33px, 0); margin-bottom: 8px;
+			br {
+				@include respond-to(md) {
+					display: none;
+				}
+			}
 		}
 
 		.buy {
@@ -185,14 +358,26 @@ h2 {
 
 	&-right {
 
-		width: 63.3%;
+		width: 66.66667%;
+		@include respond-to(md) {
+			width: 100%;
+		}
 
 		.article-wrapp {
 			display: flex; justify-content: space-between;
+			@include respond-to(md) {
+				flex-wrap: wrap;
+			}
 			& > article {
 				width: 50%; float: left;
+				@include respond-to(md) {
+					float: none; width: 100%;
+				}
 				&:last-child {
 					padding-left: 22px;
+					@include respond-to(md) {
+						padding-left: 0;
+					}
 				}
 			}
 		}
@@ -204,6 +389,9 @@ h2 {
 
 			.price {
 				background: #ffffb2; padding: 0 10px;
+				@include respond-to(md) {
+					background: transparent; padding: 0;
+				}
 			}
 		}
 	}
@@ -211,7 +399,7 @@ h2 {
 
 .about {
 	display: flex; justify-content: space-between;
-	max-width: 1360px; 
+	max-width: 1360px; margin: 0 auto;
 
 	&-block {
 		background: #f2f2f2; margin-right: 20px; width: calc(50% - 10px); padding: 23px 54px;
