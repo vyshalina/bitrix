@@ -8906,6 +8906,9 @@ h2 {
     @media (max-width: 767px) {
       .order div.tabs {
         padding-left: 48px; } }
+    @media (max-width: 480px) {
+      .order div.tabs {
+        padding-left: 0; } }
     .order div.tabs .strong {
       font-family: "GothaProBla", sans-serif;
       font-size: 44px;
@@ -8933,12 +8936,15 @@ h2 {
       margin-left: 34px;
       position: relative;
       top: -4px; }
-      @media (max-width: 767px) {
+      @media (max-width: 991px) {
         .order-content figure {
           display: none; } }
     .order-content article {
       padding-left: 48px;
       display: none; }
+      @media (max-width: 480px) {
+        .order-content article {
+          padding-left: 0; } }
       .order-content article.active {
         display: block; }
       .order-content article p {
@@ -8946,13 +8952,21 @@ h2 {
         font-size: 22px;
         line-height: 34px;
         letter-spacing: 0; }
-        @media (max-width: 767px) {
+        @media (max-width: 991px) {
           .order-content article p {
             font-size: 26px; } }
+        @media (max-width: 480px) {
+          .order-content article p {
+            font-size: 22px;
+            line-height: 28px; } }
       .order-content article ul {
         list-style-type: disc;
         font-size: 18px;
         padding-left: 20px; }
+        @media (max-width: 480px) {
+          .order-content article ul {
+            font-size: 18px;
+            line-height: 24px; } }
         .order-content article ul li {
           margin-bottom: 8px; }
       .order-content article h4 {
@@ -8965,38 +8979,51 @@ h2 {
         margin-top: 62px;
         position: relative;
         left: -20px; }
+        @media (max-width: 991px) {
+          .order-content article .btn-gr {
+            position: relative; } }
+        @media (max-width: 480px) {
+          .order-content article .btn-gr {
+            left: 0; } }
         .order-content article .btn-gr > span {
           color: #ff3333;
           font-size: 18px;
           letter-spacing: 0.2px;
           display: inline-block;
           margin-bottom: 35px; }
-          @media (max-width: 767px) {
+          @media (max-width: 991px) {
             .order-content article .btn-gr > span {
+              font-size: 22px;
+              line-height: 26px;
               width: 50%;
               float: left; } }
+          @media (max-width: 639px) {
+            .order-content article .btn-gr > span {
+              width: 100%; } }
+          @media (max-width: 480px) {
+            .order-content article .btn-gr > span {
+              font-size: 20px; } }
           .order-content article .btn-gr > span a.btn {
             margin-right: 8px; }
-            .order-content article .btn-gr > span a.btn br {
-              display: none; }
-              @media (max-width: 767px) {
-                .order-content article .btn-gr > span a.btn br {
-                  display: block; } }
-            @media (max-width: 767px) {
+            @media (max-width: 991px) {
               .order-content article .btn-gr > span a.btn {
                 display: block;
                 margin-bottom: 10px; } }
-          .order-content article .btn-gr > span a.blue-bg {
-            background: #30c8f9;
-            -webkit-border-radius: 20px;
-            border-radius: 20px; }
-            @media (max-width: 767px) {
-              .order-content article .btn-gr > span a.blue-bg {
-                float: right;
-                display: block;
-                width: 50%; } }
+          .order-content article .btn-gr > span br {
+            display: none; }
+            @media (max-width: 991px) {
+              .order-content article .btn-gr > span br {
+                display: block; } }
         .order-content article .btn-gr > .btn {
           background: #2fc7f3; }
+          @media (max-width: 991px) {
+            .order-content article .btn-gr > .btn {
+              position: absolute;
+              right: 0;
+              top: 0; } }
+          @media (max-width: 639px) {
+            .order-content article .btn-gr > .btn {
+              position: static; } }
 
 .social {
   max-width: 1200px;

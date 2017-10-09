@@ -571,6 +571,9 @@ h2 {
 		@include respond-to (sm) {
 			padding-left: 48px;
 		}
+		@include respond-to (xs) {
+			padding-left: 0;
+		}
 		.strong {
 			@include font-type($GPBla, 44px, 24px, 0); color: #21bcf0;
 		}
@@ -591,23 +594,32 @@ h2 {
 		display: flex; justify-content: space-between;
 		figure {
 			margin-left: 34px; position: relative; top: -4px;
-			@include respond-to (sm) {
+			@include respond-to (md) {
 				display: none;
 			}
 		}
 		article {
 			padding-left: 48px;
 			display: none;
+			@include respond-to (xs) {
+				padding-left: 0;
+			}
 			&.active {display: block;}
 			p {
 				@include font-type($CSReg, 22px, 34px, 0);
-				@include respond-to (sm) {
+				@include respond-to (md) {
 					font-size: 26px;
+				}
+				@include respond-to (xs) {
+					font-size: 22px; line-height: 28px;
 				}
 			}
 			ul {
 				list-style-type: disc; font-size: 18px;
 				padding-left: 20px;
+				@include respond-to (xs) {
+					font-size: 18px; line-height: 24px;
+				}
 
 				li {
 					margin-bottom: 8px;
@@ -620,35 +632,45 @@ h2 {
 
 			.btn-gr {
 				margin-top: 62px; position: relative; left: -20px;
+				@include respond-to (md) {
+					position: relative;
+				}
+				@include respond-to (xs) {left: 0;}
 				& > span {
 					color: #ff3333; font-size: 18px; letter-spacing: 0.2px;
 					display: inline-block; margin-bottom: 35px;
-					@include respond-to (sm) {
+					@include respond-to (md) {
+						font-size: 22px; line-height: 26px;
 						width: 50%; float: left;
 					}
-						a.btn {
-							margin-right: 8px; 
-							br {
-								display: none;
-								@include respond-to (sm) {
-									display: block;
-								}
-							}
-							@include respond-to (sm) {
-								display: block; margin-bottom: 10px;
-							}
-							
+					@media (max-width: 639px) {width: 100%;}
+					@include respond-to (xs) {
+						font-size: 20px;
+					}
+					a.btn {
+						margin-right: 8px; 
+						@include respond-to (md) {
+							display: block; margin-bottom: 10px;
 						}
-						a.blue-bg {
-						background: #30c8f9;
-						border-radius: 20px;
-						@include respond-to (sm)  {float: right; display:block; width: 50%;}
 					}
 
+					br {
+						display: none;
+						@include respond-to (md) {
+							display: block;
+						}
+					}
 				}
 
 				& > .btn {
 					background: #2fc7f3;
+					@include respond-to (md)  {
+						position: absolute; right: 0; top: 0;
+					}
+					@media (max-width: 639px) {
+						position: static;
+					}
+
 				}
 			}
 		}
