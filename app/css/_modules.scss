@@ -172,6 +172,7 @@ h2 {
 
 			&:nth-child(3) {padding-left: 5px;}
 			&.btn {
+				font-size: 22px;
 				position: relative; margin-top: 18px; left: -12px;
 				@include respond-to(1419px) {
 					white-space: normal;
@@ -806,6 +807,7 @@ h2 {
 
 	small {
 		@include font-type($CSReg, 18px, 22px, 0); color: #fff;
+		@media (max-width: 1349px) {font-size: 16px;}
 		@include respond-to (lg) {
 			font-size: 22px; line-height: 32px;
 			float: left; width: 50%;
@@ -815,8 +817,8 @@ h2 {
 
 	& > a.btn {
 		display: flex !important; align-items: center; 
-
 		font-size: 18px !important;
+		@media (max-width: 1349px) {font-size: 15px;}
 		@include respond-to (lg) {
 			float: right;
 			margin-top: 37px;
@@ -848,11 +850,12 @@ h2 {
 			}
 			a {
 				color: #ff1919; @include font-type($CSMed, 18px, 22px, 0); text-transform: uppercase;
-			}
-			
+				@media (max-width: 1349px) {
+					font-size: 15px;
+				}
 
-		}
+			}
 	
-		
+		}
 	}
 }
