@@ -29,6 +29,9 @@ h2 {
 .price {
 	@include font-type($CSReg, 26px, 40px, 0.2px); color: #000;
 	padding: 0 20px; height: 39px;
+	@include respond-to(sm) {
+		font-size: 20px;
+	}
 }
 
 .ov-hidden {
@@ -48,6 +51,9 @@ h2 {
 		width: 30px; height: 30px; padding-top: 5px;
 		@include respond-to(md) {
 			display: block; z-index: 9999; position: relative; margin-left: 48px;
+		}
+		@include respond-to(xs) {
+			margin-left: 10px;
 		}
 		span {
 			width: 26px; height: 4px;display: block; margin: 0 auto 4px;
@@ -114,6 +120,9 @@ h2 {
 		}
 		.search {
 			margin-left: 32px;
+			@include respond-to(md) {
+				margin-left: 0;
+			}
 		}
 	}
 }
@@ -126,7 +135,7 @@ h2 {
 	&-contact {
 		display: block; width: 410px; padding-top: 29px; padding-left: 15px; float: right; position: relative; right: 0;  z-index: 2;
 		@include respond-to(md) {
-			float: none; padding: 4px 20px 0; display: flex; flex-wrap: wrap;
+			float: none; padding: 4px 20px 0; display: flex; flex-wrap: wrap; width: 100%;
 		}
 		i {
 			position: absolute; left: -69px; top: 33px;
@@ -139,7 +148,7 @@ h2 {
 			display: block;
 			@include respond-to(md) {
 				font-size: 26px; line-height: 30px;
-				margin-bottom: 11px;
+				margin-bottom: 11px; display: block; width: 100%;
 			}
 
 			&:nth-child(3) {
@@ -162,7 +171,8 @@ h2 {
 			&.btn {
 				position: relative; margin-top: 18px; left: -12px;
 				@include respond-to(md) {
-					margin-top: 5px;
+					white-space: normal;
+					margin-top: 5px; padding: 1px 15px !important;
 					background: #1a5c95;
 				}
 			}
@@ -354,6 +364,9 @@ h2 {
 
 			.price {
 				margin-right: 14px;
+				@include respond-to(sm) {
+					padding: 0 10px;
+				}
 			}
 		}
 	}
@@ -367,6 +380,9 @@ h2 {
 
 			.price {
 				background: #9bfade; padding: 0 27px;
+				@include respond-to(sm) {
+					padding: 0 10px;
+				}
 			}
 		}
 		
@@ -410,7 +426,7 @@ h2 {
 			.price {
 				background: #ffffb2; padding: 0 10px;
 				@include respond-to(md) {
-					font-size: 22px; line-height: 26px;
+					font-size: 20px; line-height: 26px;
 					background: transparent; padding: 0;
 				}
 			}
@@ -432,6 +448,9 @@ h2 {
 		}
 		&:last-child {
 			margin-right: 0; padding-left: 38px;
+			@include respond-to(sm) {
+				margin: 0 -15px; padding: 23px 37px;
+			}
 		}
 
 		h3 {

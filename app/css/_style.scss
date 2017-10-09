@@ -8,12 +8,15 @@
 		&-header {
 			display: flex;
 			padding: 22px 0 25px; width: 100%; max-width: 1200px; margin: 0 auto;
+			@include respond-to(md) {
+				justify-content: space-between;
+			}
 
 			.logo, .nav {float: left;}
 			.logo {
 				margin-right: 55px;
 				@include respond-to(md) {
-					z-index: 9999;
+					z-index: 9999; margin-right: 0;
 				}
 			}
 		}

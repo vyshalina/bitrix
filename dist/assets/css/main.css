@@ -5597,8 +5597,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome/fontawesome-webfont.eot?v=4.7.0");
-  src: url("../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -8207,6 +8207,12 @@ h2 {
   color: #000;
   padding: 0 20px;
   height: 39px; }
+  @media (max-width: 767px) {
+    .price {
+      font-size: 20px; } }
+
+.ov-hidden {
+  overflow: hidden; }
 
 /*********************************/
 /*********** Modules *************/
@@ -8226,6 +8232,9 @@ h2 {
         z-index: 9999;
         position: relative;
         margin-left: 48px; } }
+    @media (max-width: 480px) {
+      .nav a.burger {
+        margin-left: 10px; } }
     .nav a.burger span {
       width: 26px;
       height: 4px;
@@ -8332,6 +8341,9 @@ h2 {
           display: none; } }
     .nav-right .search {
       margin-left: 32px; }
+      @media (max-width: 991px) {
+        .nav-right .search {
+          margin-left: 0; } }
 
 .intro {
   position: relative;
@@ -8357,7 +8369,8 @@ h2 {
         display: flex;
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
-        flex-wrap: wrap; } }
+        flex-wrap: wrap;
+        width: 100%; } }
     .intro-contact i {
       position: absolute;
       left: -69px;
@@ -8376,7 +8389,9 @@ h2 {
         .intro-contact a {
           font-size: 26px;
           line-height: 30px;
-          margin-bottom: 11px; } }
+          margin-bottom: 11px;
+          display: block;
+          width: 100%; } }
       @media (max-width: 991px) {
         .intro-contact a:nth-child(3) {
           -webkit-box-ordinal-group: 3;
@@ -8403,7 +8418,9 @@ h2 {
         left: -12px; }
         @media (max-width: 991px) {
           .intro-contact a.btn {
+            white-space: normal;
             margin-top: 5px;
+            padding: 1px 15px !important;
             background: #1a5c95; } }
   .intro-text {
     clear: both;
@@ -8658,6 +8675,9 @@ h2 {
           margin-top: 28px; } }
       .offer article .buy .price {
         margin-right: 14px; }
+        @media (max-width: 767px) {
+          .offer article .buy .price {
+            padding: 0 10px; } }
   .offer > article .buy {
     margin-top: 35px; }
     @media (max-width: 991px) {
@@ -8666,6 +8686,9 @@ h2 {
     .offer > article .buy .price {
       background: #9bfade;
       padding: 0 27px; }
+      @media (max-width: 767px) {
+        .offer > article .buy .price {
+          padding: 0 10px; } }
   .offer-right {
     width: 66.66667%; }
     @media (max-width: 991px) {
@@ -8718,7 +8741,7 @@ h2 {
         padding: 0 10px; }
         @media (max-width: 991px) {
           .offer-right > span .price {
-            font-size: 22px;
+            font-size: 20px;
             line-height: 26px;
             background: transparent;
             padding: 0; } }
@@ -8753,6 +8776,10 @@ h2 {
     .about-block:last-child {
       margin-right: 0;
       padding-left: 38px; }
+      @media (max-width: 767px) {
+        .about-block:last-child {
+          margin: 0 -15px;
+          padding: 23px 37px; } }
     .about-block h3 {
       font-size: 32px;
       margin-bottom: 23px; }
@@ -9062,13 +9089,20 @@ h2 {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto; }
+    @media (max-width: 991px) {
+      .app .wr-header {
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between; } }
     .app .wr-header .logo, .app .wr-header .nav {
       float: left; }
     .app .wr-header .logo {
       margin-right: 55px; }
       @media (max-width: 991px) {
         .app .wr-header .logo {
-          z-index: 9999; } }
+          z-index: 9999;
+          margin-right: 0; } }
   .app .wr-intro {
     position: relative; }
     .app .wr-intro:before {
