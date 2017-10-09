@@ -172,6 +172,7 @@ h2 {
 
 			&:nth-child(3) {padding-left: 5px;}
 			&.btn {
+				font-size: 22px;
 				position: relative; margin-top: 18px; left: -12px;
 				@include respond-to(md) {
 					white-space: normal;
@@ -636,16 +637,13 @@ h2 {
 		article {
 			padding-left: 48px;
 			display: none;
-<<<<<<< HEAD
 			&.active {
 				display: block;
 			}
-=======
 			@include respond-to (xs) {
 				padding-left: 0;
 			}
 			&.active {display: block;}
->>>>>>> fe9b9a939b0fdf45533b37aa74f5d49e5b62446b
 			p {
 				@include font-type($CSReg, 22px, 34px, 0);
 				@include respond-to (md) {
@@ -808,6 +806,7 @@ h2 {
 
 	small {
 		@include font-type($CSReg, 18px, 22px, 0); color: #fff;
+		@media (max-width: 1349px) {font-size: 16px;}
 		@include respond-to (lg) {
 			font-size: 22px; line-height: 32px;
 			float: left; width: 50%;
@@ -817,8 +816,8 @@ h2 {
 
 	& > a.btn {
 		display: flex !important; align-items: center; 
-
 		font-size: 18px !important;
+		@media (max-width: 1349px) {font-size: 15px;}
 		@include respond-to (lg) {
 			float: right;
 			margin-top: 37px;
@@ -850,11 +849,12 @@ h2 {
 			}
 			a {
 				color: #ff1919; @include font-type($CSMed, 18px, 22px, 0); text-transform: uppercase;
-			}
-			
+				@media (max-width: 1349px) {
+					font-size: 15px;
+				}
 
-		}
+			}
 	
-		
+		}
 	}
 }
