@@ -8214,6 +8214,9 @@ h2 {
 .ov-hidden {
   overflow: hidden; }
 
+.ov-hidden {
+  overflow: hidden; }
+
 /*********************************/
 /*********** Modules *************/
 /*********************************/
@@ -8813,11 +8816,14 @@ h2 {
     color: #21bcf0;
     font-family: "gothapromed", sans-serif;
     font-size: 44px;
-    line-height: 24px;
+    line-height: 52px;
     letter-spacing: 0;
     font-family: "gothapromed", sans-serif;
     padding-left: 65px;
     margin-bottom: 61px; }
+    @media (max-width: 767px) {
+      .order h3 {
+        padding-left: 48px; } }
     .order h3 .strong {
       font-family: "GothaProBla", sans-serif;
       font-size: 44px;
@@ -8844,13 +8850,19 @@ h2 {
       margin-left: 34px;
       position: relative;
       top: -4px; }
+      @media (max-width: 767px) {
+        .order-content figure {
+          display: none; } }
     .order-content article {
       padding-left: 48px; }
       .order-content article p {
         font-family: "ClearSans-Regular", sans-serif;
         font-size: 22px;
-        line-height: 32px;
+        line-height: 34px;
         letter-spacing: 0; }
+        @media (max-width: 767px) {
+          .order-content article p {
+            font-size: 26px; } }
       .order-content article ul {
         list-style-type: disc;
         font-size: 18px;
@@ -8867,18 +8879,36 @@ h2 {
         margin-top: 62px;
         position: relative;
         left: -20px; }
-        .order-content article .btn-gr span {
+        .order-content article .btn-gr > span {
           color: #ff3333;
           font-size: 18px;
           letter-spacing: 0.2px;
           display: inline-block;
           margin-bottom: 35px; }
-          .order-content article .btn-gr span a.btn {
+          @media (max-width: 767px) {
+            .order-content article .btn-gr > span {
+              width: 50%;
+              float: left; } }
+          .order-content article .btn-gr > span a.btn {
             margin-right: 8px; }
-          .order-content article .btn-gr span a.blue-bg {
-            background: #30c7f4;
+            .order-content article .btn-gr > span a.btn br {
+              display: none; }
+              @media (max-width: 767px) {
+                .order-content article .btn-gr > span a.btn br {
+                  display: block; } }
+            @media (max-width: 767px) {
+              .order-content article .btn-gr > span a.btn {
+                display: block;
+                margin-bottom: 10px; } }
+          .order-content article .btn-gr > span a.blue-bg {
+            background: #30c8f9;
             -webkit-border-radius: 20px;
             border-radius: 20px; }
+            @media (max-width: 767px) {
+              .order-content article .btn-gr > span a.blue-bg {
+                float: right;
+                display: block;
+                width: 50%; } }
 
 .social {
   max-width: 1200px;
@@ -8889,6 +8919,10 @@ h2 {
     display: inline-block;
     margin-right: 15px;
     padding-top: 7px; }
+    @media (max-width: 480px) {
+      .social span {
+        margin-bottom: 20px;
+        display: block; } }
   .social ul {
     float: left; }
     .social ul li {
