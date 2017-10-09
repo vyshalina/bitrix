@@ -35,10 +35,17 @@
 			@include respond-to(md) {
 				padding: 53px 25px 0;
 			}
+			@include respond-to(xs) {
+				padding: 53px 0 0;
+			}
 
 			h2 {
 				line-height: 38px;
 				margin-bottom: 27px; position: relative; left: -3px;
+				@include respond-to(xs) {
+					font-size: 26px; line-height: 30px;
+					left: 0;
+				}
 			}
 		}
 
