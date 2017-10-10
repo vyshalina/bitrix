@@ -27,8 +27,12 @@ h2 {
 .blue-bg {background: $blue-bg;}
 
 .price {
-	@include font-type($CSReg, 26px, 40px, 0.2px); color: #000;
+	@include font-type($CSReg, 26px, 38px, 0.2px); color: #000;
 	padding: 0 20px; height: 39px;
+	@include respond-to(1300px) {
+		font-size: 24px;
+		padding: 0 10px;
+	}
 	@include respond-to(sm) {
 		font-size: 20px;
 	}
@@ -87,7 +91,7 @@ h2 {
 			transform: translateX(0);
 		}
 		li {
-			float: left; margin-right: 28px;
+			float: left; margin-right: 31px;
 			&:last-child {margin-right: 0;}
 			&.active {a {color: #000;}}
 			@include respond-to(md) {
@@ -96,7 +100,7 @@ h2 {
 			}
 
 			a {
-				@include font-type($CSMed, 18px, 22px, 0.2px); color: $red-text; text-transform: uppercase;
+				@include font-type($CSMed, 18px, 20px, 0.2px); color: $red-text; text-transform: uppercase;
 				@include respond-to(md) {
 					font-size: 22px; line-height: 24px;
 				}
@@ -111,8 +115,8 @@ h2 {
 			width: auto;
 		}
 		.language {
-			@include font-type($CSBol, 18px, 28px, 0); color: $red-text; text-transform: uppercase;
-			padding: 0 10px; position: relative; top: -3px;
+			@include font-type($CSBol, 18px, 26px, 0); color: $red-text; text-transform: uppercase;
+			padding: 0 10px; position: relative; top: -5px;
 			background: $grey-bg;
 			@include respond-to(md) {
 				display: none;
@@ -141,7 +145,7 @@ h2 {
 			padding: 10px 0 0;
 		}
 		i {
-			position: absolute; left: -69px; top: 33px;
+			position: absolute; left: -66px; top: 29px;
 			@include respond-to(lg) {
 				display: none;
 			}
@@ -175,11 +179,11 @@ h2 {
 				font-size: 22px;
 				position: relative; margin-top: 18px; left: -12px;
 				@include respond-to(md) {
-					white-space: normal;
 					margin-top: 5px; padding: 1px 15px !important; width: auto;height: auto !important;
 					background: #1a5c95;
 				}
 				@include respond-to(xs) {
+					white-space: normal;
 					left: 0;
 				}
 			}
@@ -225,7 +229,7 @@ h2 {
 
 		figure {
 			text-align: left;
-			width: 370px; margin-bottom: 25px; display: inline-block;
+			width: 370px; margin-bottom: 23px; display: inline-block;
 			@include respond-to(md) {
 				width: auto; margin-bottom: 0; display: block;
 			}
@@ -269,7 +273,7 @@ h2 {
 		}
 
 		p {
-			@include font-type($CSReg, 32px, 42px, 0);
+			@include font-type($CSReg, 32px, 42px, 0.15px);
 			@include respond-to(md) {
 				font-size: 26px; line-height: 32px;
 				display: block;
@@ -287,7 +291,7 @@ h2 {
 
 	&-about {
 
-		padding-top: 96px; line-height: 75px; display: inline-block;
+		padding-top: 98px; line-height: 75px; display: inline-block;
 		@include respond-to(lg) {
 			display: flex; justify-content: space-between;
 		}
@@ -299,7 +303,7 @@ h2 {
 		}
 
 		li {
-			color: #2fc7f3; @include font-type($CSReg, 44px, 48px, 0);
+			color: #2fc7f3; @include font-type($CSReg, 44px, 46px, 0);
 			position: relative; width: 330px;  float: left; display: inline-block;
 			@include respond-to(lg) {
 				font-size: 36px; line-height: 38px;
@@ -385,125 +389,149 @@ h2 {
 }
 
 .offer {
-	display: flex; justify-content: space-between;
-	position: relative; max-width: 1200px; margin: 0 auto; position: relative; left: -3px;
-	@include respond-to(md) {
-		flex-wrap: wrap;
+	max-width: 1360px; padding: 62px 80px 66px; margin: 0 auto;
+	border: solid 1px #2fc7f3;
+	@include respond-to(1389px) {
+		border: none;
 	}
+	@include respond-to(sm) {
+		padding: 0;
+	}
+	& > div {
+		display: flex; justify-content: space-between;
+		position: relative; position: relative; left: -3px;
+		@include respond-to(lg) {
+			flex-wrap: wrap;
+		}
 
-	article {
-		width: 33.33333%;
-		@include respond-to(md) {
-			width: 100%; margin-bottom: 61px;
-		}
-		@include respond-to(xs) {
-			margin-bottom: 40px;
-		}
-		&:last-child {
-			margin-bottom: 0;
-		}
-		h3 {
-			@include font-type($CSReg, 22px, 28px, 0); text-transform: uppercase;
+		article {
+			width: 435px; padding-top: 16px; padding-right: 45px;
+			@include respond-to(1389px) {
+				width: 33.33333%;
+			}
+			@include respond-to(lg) {
+				width: 100%; margin-bottom: 40px;
+			}
 			@include respond-to(md) {
-				margin-top: 13px; margin-bottom: 12px;
+				margin-bottom: 61px; padding-top: 13px; padding-right: 0;
 			}
 			@include respond-to(xs) {
-				font-size: 20px; line-height: 28px;
+				margin-bottom: 40px;
 			}
-		} 
-
-		p {
-			@include font-type($CSReg, 22px, 33px, 0); margin-bottom: 8px;
-			@include respond-to(md) {
-				line-height: 32px; margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
 			}
-			@include respond-to(xs) {
-				font-size: 18px; line-height: 26px;
-			}
-			br {
-				@include respond-to(md) {
-					display: none;
+			h3 {
+				@include font-type($CSReg, 22px, 28px, 0.1px); text-transform: uppercase;
+				margin-top: 0; margin-bottom: 12px;
+				@include respond-to(xs) {
+					font-size: 20px; line-height: 28px;
 				}
-			}
-		}
+			} 
 
-		.buy {
-			display: flex;
-			margin-top: 51px;
-			@include respond-to(md) {
-				margin-top: 28px;
-			}
-
-			.price {
-				margin-right: 14px;
-				@include respond-to(sm) {
-					padding: 0 10px;
+			p {
+				@include font-type($CSReg, 22px, 32px, 0.1px); margin-bottom: 10px;
+				@include respond-to(xs) {
+					font-size: 18px; line-height: 26px;
 				}
-			}
-		}
-	}
-
-	& > article {
-		.buy {
-			margin-top: 35px;
-			@include respond-to(md) {
-				margin-top: 28px;
-			}
-
-			.price {
-				background: #9bfade; padding: 0 27px;
-				@include respond-to(sm) {
-					padding: 0 10px;
-				}
-			}
-		}
-		
-	}
-
-	&-right {
-
-		width: 66.66667%;
-		@include respond-to(md) {
-			width: 100%;
-		}
-
-		.article-wrapp {
-			display: flex; justify-content: space-between;
-			@include respond-to(md) {
-				flex-wrap: wrap;
-			}
-			& > article {
-				width: 50%; float: left;
-				@include respond-to(md) {
-					float: none; width: 100%;
-				}
-				&:last-child {
-					padding-left: 22px;
-					@include respond-to(md) {
-						padding-left: 0;
+				br {
+					@include respond-to(1389px) {
+						display: none;
 					}
 				}
 			}
-		}
-		
 
-		& > span {
-			@include font-type($CSReg, 22px, 24px, 0); color: #000;
-			display: block; margin-top: 47px; position: relative; left: -5px;
-			@include respond-to(md) {
-				line-height: 26px;
-				left: 0; width: 360px; margin-top: 26px;
+			.buy {
+				display: flex;
+				margin-top: 24px;
+				@include respond-to(md) {
+					margin-top: 28px;
+				}
+
+				.price {
+					margin-right: 21px;
+					@include respond-to(sm) {
+						padding: 0 10px;
+					}
+				}
+
+				.btn {
+					line-height: 32px !important;
+					height: 40px !important; padding: 0 16px 0 15px !important;
+				}
 			}
-			@include respond-to(xs) {
+		}
+
+		& > article {
+			.buy {
+				margin-top: 41px;
+				@include respond-to(md) {
+					margin-top: 28px;
+				}
+
+				.price {
+					background: #9bfade; padding: 0 27px;
+					@include respond-to(sm) {
+						padding: 0 10px;
+					}
+				}
+
+				.btn {
+					line-height: 32px !important;
+					height: 40px !important; padding: 0 16px 0 15px !important;
+				}
+			}
+
+		}
+
+		.offer-right {
+
+			width: calc(100% - 435px); padding-left: 5px;
+			@include respond-to(1389px) {
+				width: 66.66667%;
+			}
+			@include respond-to(lg) {
 				width: 100%;
 			}
 
-			.price {
-				white-space: nowrap;
-				background: #ffffb2; padding: 0 10px;
+			.article-wrapp {
+				display: flex; justify-content: space-between;
 				@include respond-to(md) {
-					font-size: 20px; line-height: 26px;
-					background: transparent; padding: 0;
+					flex-wrap: wrap;
+				}
+				& > article {
+					width: 50%; float: left;
+					@include respond-to(md) {
+						float: none; width: 100%;
+					}
+					&:last-child {
+						padding-left: 22px;
+						@include respond-to(md) {
+							padding-left: 0;
+						}
+					}
+				}
+			}
+
+
+			& > span {
+				@include font-type($CSReg, 22px, 24px, 0.1px); color: #000;
+				display: block; margin-top: 48px; position: relative; left: -5px;
+				@include respond-to(md) {
+					line-height: 26px;
+					left: 0; width: 360px; margin-top: 26px;
+				}
+				@include respond-to(xs) {
+					width: 100%;
+				}
+
+				.price {
+					white-space: nowrap;
+					background: #ffffb2; padding: 0 10px;
+					@include respond-to(md) {
+						font-size: 20px; line-height: 26px;
+						background: transparent; padding: 0;
+					}
 				}
 			}
 		}
@@ -518,17 +546,18 @@ h2 {
 	}
 
 	&-block {
-		background: #f2f2f2; margin-right: 20px; width: calc(50% - 10px); padding: 23px 54px;
+		padding: 41px 40px 26px 79px; margin-right: 20px; width: calc(50% - 10px);
+		background: #f2f2f2;
 		@include respond-to(sm) {
-			width: auto; margin: 0 -15px; padding: 23px 37px 27px;
+			width: auto; margin: 0 -15px; padding: 41px 37px 26px;
 		}
 		@include respond-to(xs) {
 			padding: 23px 15px 27px;
 		}
 		&:last-child {
-			margin-right: 0; padding-left: 38px;
+			margin-right: 0; padding: 41px 75px 26px 40px;
 			@include respond-to(sm) {
-				margin: 0 -15px; padding: 23px 37px 27px;
+				margin-right: -15px; padding: 41px 37px 26px;
 			}
 			@include respond-to(xs) {
 				padding: 23px 15px 27px;
@@ -537,7 +566,7 @@ h2 {
 
 		h3 {
 			font-size: 32px; 
-			margin-bottom: 23px;
+			margin-bottom: 22px; margin-top: 0;
 			@include respond-to(xs) {
 				font-size: 26px;
 			}
@@ -552,7 +581,7 @@ h2 {
 
 		p {
 			line-height: 32px;
-			margin-bottom: 19px;
+			margin-bottom: 20px;
 			@include respond-to(xs) {
 				line-height: 26px;
 			}
@@ -564,7 +593,7 @@ h2 {
 		}
 
 		ol {
-			line-height: 34px;
+			line-height: 32px;
 			list-style-type: decimal; margin-left: 42px;
 			@include respond-to(xs) {
 				line-height: 26px;
@@ -572,7 +601,10 @@ h2 {
 			}
 
 			li {
-				margin-bottom: 17px;
+				margin-bottom: 20px;
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 
@@ -601,9 +633,9 @@ h2 {
 	max-width: 1200px; margin: 0 auto;
 
 	div.tabs {
-		color: #21bcf0; @include font-type($GPMed, 44px, 52px, 0);
+		color: #21bcf0; @include font-type($GPMed, 44px, 52px, -0.15px);
 		font-family: $GPMed;
-		padding-left: 65px; margin-bottom: 61px;
+		padding-left: 69px; margin-bottom: 30px;
 		@include respond-to (sm) {
 			padding-left: 48px;
 		}
@@ -611,7 +643,7 @@ h2 {
 			padding-left: 0;
 		}
 		.strong {
-			@include font-type($GPBla, 44px, 24px, 0); color: #21bcf0;
+			@include font-type($GPBla, 44px, 24px, -0.4px); color: #21bcf0;
 		}
 
 		a {
@@ -630,20 +662,21 @@ h2 {
 	&-content {
 		display: flex; justify-content: space-between; position: relative;
 		figure {
-			margin-left: 34px; position: relative; top: -4px;
+			margin-left: 34px; position: relative; padding-top: 17px;
 			@include respond-to (md) {
 				display: none;
 			}
 		}
 		article {
-			padding-left: 48px;
+			padding-left: 48px; padding-top: 18px;
 			display: none;
 			@include respond-to (xs) {
 				padding-left: 0;
 			}
 			&.active {display: block;}
 			p {
-				@include font-type($CSReg, 22px, 34px, 0);
+				@include font-type($CSReg, 22px, 32px, 0.1px);
+				margin-bottom: 19px;
 				@include respond-to (md) {
 					font-size: 26px;
 				}
@@ -652,23 +685,43 @@ h2 {
 				}
 			}
 			ul {
-				list-style-type: disc; font-size: 18px;
-				padding-left: 20px;
+				font-size: 18px;
+				padding-left: 24px; margin-bottom: 43px;
 				@include respond-to (xs) {
 					font-size: 18px; line-height: 24px;
 				}
 
 				li {
-					margin-bottom: 8px;
+					margin-bottom: 10px; position: relative;
+					&:last-child {
+						margin-bottom: 0;
+					}
+					&:before {
+						content: '';
+						display: block; width: 8px; height: 8px; position: absolute; left: -19px; top: 7px;
+						background: #000; border-radius: 50%;
+					}
 				}
 			}
 
 			h4 {
-				@include font-type($CSReg, 32px, 36px, 0); margin-top: 44px;
+				@include font-type($CSReg, 32px, 36px, 0);
+				margin-top: 0; margin-bottom: 16px;
+			}
+
+			& > span {
+				@include font-type($CSReg, 22px, 32px, 0.2px);
+				display: block; position: relative; top: -9px;
+				@include respond-to (md) {
+					font-size: 26px;
+				}
+				@include respond-to (xs) {
+					font-size: 22px; line-height: 28px;
+				}
 			}
 
 			.btn-gr {
-				margin-top: 62px; position: relative; left: -20px;
+				margin-top: 57px; position: relative; left: -20px;
 				@include respond-to (md) {
 					position: relative;
 				}
@@ -715,16 +768,25 @@ h2 {
 }
 
 .social {
-	max-width: 1200px; margin: 0 auto;
+	max-width: 1200px; margin: 0 auto; position: relative; left: -34px;
 	font-size: 24px; 
+	&:after {
+		content: '';
+		display: block; width: 100%; height: 0; clear: both;
+	}
 	span {
-		float: left; display: inline-block; margin-right: 15px; padding-top: 7px;
+		letter-spacing: 0.1px;
+		float: left; display: inline-block; margin-right: 18px; padding-top: 11px;
 		@include respond-to (xs) {
 			margin-bottom: 20px; display: block;
 		}
 	}
 	ul {
 		float: left;
+		&:after {
+			content: '';
+			display: block; width: 100%; height: 0; clear: both;
+		}
 		li {
 			float: left; margin-right: 10px;
 			a {
@@ -745,10 +807,21 @@ h2 {
 }
 
 .seemore {
-	h2 {margin-bottom: 49px;}
+	margin: 0 -32px; padding-bottom: 5px;
+	@include respond-to(md) {
+		margin: 0;
+	}
+	h2 {
+		margin-bottom: 47px; max-width: none;
+	}
 	ul {
+		margin-bottom: 0;
+		&:after {
+			content: '';
+			display: block; width: 100%; height: 0; clear: both;
+		}
 		@include respond-to (sm) {
-			display: flex; justify-content: space-around;
+			display: flex; justify-content: space-around; flex-wrap: wrap;
 			@media (max-width: 639px) {display: block;} 
 		}
 		li {
@@ -804,7 +877,7 @@ h2 {
 
 	small {
 		@include font-type($CSReg, 18px, 22px, 0); color: #fff;
-		@media (max-width: 1349px) {font-size: 16px;}
+		@media (max-width: 1359px) {font-size: 16px;}
 		@include respond-to (lg) {
 			font-size: 22px; line-height: 32px;
 			float: left; width: 50%;
@@ -815,7 +888,7 @@ h2 {
 	& > a.btn {
 		display: flex !important; align-items: center; 
 		font-size: 18px !important;
-		@media (max-width: 1349px) {font-size: 15px;}
+		@media (max-width: 1359px) {font-size: 15px;}
 		@include respond-to (lg) {
 			float: right;
 			margin-top: 37px;
@@ -830,11 +903,19 @@ h2 {
 	}
 
 	ul.contact {
+		margin-bottom: 0;
+		&:after {
+			content: '';
+			display: block; width: 100%; height: 0; clear: both;
+		}
 		@include respond-to (lg) {
 			clear: both; display: block; padding-top: 30px;
 		}
 		li {
-			float: left; margin-right: 10px;
+			float: left; margin-right: 24px;
+			@include respond-to(1239px) {
+				margin-right: 15px;
+			}
 			@include respond-to (lg) {
 				margin-right: 50px;
 			}
@@ -846,13 +927,13 @@ h2 {
 				@media  (max-width: 639px) {margin-bottom: 0;}
 			}
 			a {
-				color: #ff1919; @include font-type($CSMed, 18px, 22px, 0); text-transform: uppercase;
-				@media (max-width: 1349px) {
+				color: #ff1919; @include font-type($CSMed, 18px, 22px, 0.2px); text-transform: uppercase;
+				@media (max-width: 1359px) {
 					font-size: 15px;
 				}
 
 			}
-	
+
 		}
 	}
 }
